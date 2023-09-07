@@ -1,0 +1,289 @@
+
+
+header.entry-header, footer.entry-footer {
+
+	display: none;
+}
+
+
+html {
+	font-weight: 100;
+	text-transform: uppercase;
+	color: #777;
+	background-color: #efefef;
+	letter-spacing: 0.3em;
+	height: 100%;
+// 	font-family: Times New Roman, sans-serif;
+        font-family: Courier New,sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#contactForm,
+#contactFormError,
+#contactFormFeedback {
+	position: absolute;
+	z-index: 999;
+	background-color: rgba(200,200,200,0.8);
+	padding: 0em;
+	width: 100%;
+	top: 10%;
+	left: 0;
+	font-size: 0.8em;
+	height: 50%;
+	display: none;
+}
+
+#contactForm form {
+	width: 100%;
+	margin: 0 auto;
+}
+#contactForm form label{
+	float: left;
+	margin: 5px;
+	width: 90%;
+
+}
+
+#contactFormError,
+#contactFormFeedback {
+		cursor: pointer;
+		color: #000;
+}
+#contactFormError p,
+#contactFormFeedback p {
+	width: 50%;
+	position: relative;
+	display: block;
+	margin: 5em auto;
+}
+
+
+#contactForm form textarea,
+#contactForm form input {
+	width: 90%;
+	float: right;
+	margin: 5px;
+
+}
+#contactForm form input#submit {
+	width: 100%;
+	margin: 0;
+	margin-top: 1em;
+	font-size: 2em;
+	padding: 0;
+}
+
+
+	.main {
+
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		width: 100%;
+		margin: 0 auto;
+
+	}
+	.container {
+		height: 50%;
+		width: 100%;
+		display: block;
+	}
+.clear {
+
+clear:both;
+
+}
+.list {
+	width: 100%;
+	float: left;
+	display: block;
+	margin: 1em 0;
+
+}
+	.element {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: block;
+		text-align: center;
+
+	}
+
+.morphist > * {
+    display: none;
+}
+
+.morphist > .animated {
+    display: inline-block;
+}
+
+    #list2 {
+        -vendor-animation-duration: 2s;
+    }
+
+.footer {
+	margin: 0;
+	width: 100%;
+	font-size: 0.75em;
+	display: block;
+	position: fixed;
+	text-align: center;
+	background-color: #efefef;
+	bottom: 0;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	
+}
+.footer .linkContainer {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+}
+.footer #footerContent {
+	display: none;
+}
+
+.footer #footerSwitch {
+	margin: 0;
+	padding: 1em 0;
+	width: 100%;
+	display: block;
+	cursor: pointer;
+}
+.footer #footerSwitch:hover {
+	background-color: #afafaf;
+
+}
+
+.footer .linkContainer a {
+	width: 100%;
+	margin: 0;
+	padding: 1em 0;
+	height: 100%;
+	display: block;
+}
+
+.footer .separator {
+	display: none;
+}
+.footer p:hover {
+	background-color: #afafaf;
+}
+.footer p {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+p {display:inline;}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+
+/*(-webkit-min-device-pixel-ratio: 1.5),
+	   (min-resolution: 144dpi),
+	   (min-resolution: 1.5dppx) {*/
+
+@media (min-width: 930px) {
+
+		.list:nth-child(2) {
+			width: 4% !important;
+			}
+
+	   	.list {
+	   		width: 32% !important;
+	   		margin: 0;
+	   		padding: 0;
+	   		float: left;
+	   		text-align: center;
+	   	}
+		.footer {
+			margin: 0 5%;
+			width: 90%;
+			font-size: 0.75em;
+			display: block;
+			position: fixed;
+			text-align: center;
+			bottom: 0;
+			-webkit-box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.3);
+			-moz-box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.3);
+			box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.3);
+		}
+		.footer .separator {
+			display: inline;
+			}
+
+		#footerSwitch {
+			display: none !important;
+		}
+		
+		.footer #footerContent {
+			display: block;
+		}
+				
+				
+		.footer .separator:hover {
+			background-color: transparent;
+		}
+		.footer .separator {
+			display: inline;
+		}
+		.footer .linkContainer {
+			margin: 0;
+			padding: 0;
+			width: auto;
+			display: inline-block;
+		}
+		.footer .linkContainer a {
+			width: 100%;
+			margin: 0;
+			padding: 0.5em;
+			height: 100%;
+			display: inline-block;
+		}
+		
+		#contactForm,
+		#contactFormError,
+		#contactFormFeedback {
+			position: absolute;
+			z-index: 999;
+			background-color: rgba(200,200,200,0.8);
+			padding: 1em;
+			width: 60%;
+			top: 20%;
+			left: 20%;
+			font-size: 0.8em;
+			height: 30%;
+			display: none;
+		}
+		#contactForm form {
+			width: 60%;
+			margin: 0 auto;
+		}
+		#contactForm form label{
+			float: left;
+			margin: 5px 0;
+			width: 40%;
+
+		}
+		#contactForm form textarea,
+		#contactForm form input {
+			width: 60%;
+			float: right;
+			margin: 5px 0;
+
+		}
+
+
+	}

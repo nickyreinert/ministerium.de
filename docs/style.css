@@ -7,6 +7,7 @@ header.entry-header, footer.entry-footer {
 
 
 html {
+	--invert-amount: 0;
 	font-weight: 100;
 	text-transform: uppercase;
 	color: #777;
@@ -15,11 +16,16 @@ html {
 	height: 100%;
 // 	font-family: Times New Roman, sans-serif;
         font-family: Courier New,sans-serif;
+	overflow: hidden;
+	filter: invert(var(--invert-amount));
+	transition: filter 120ms linear;
 }
 
 body {
 	padding: 0;
 	margin: 0;
+	height: 100%;
+	overflow: hidden;
 }
 
 #contactForm,
@@ -90,10 +96,47 @@ body {
 
 	}
 	.container {
+		--headline-font-scale: 1;
 		height: 50%;
 		width: 100%;
 		display: block;
+		font-size: calc(1rem * var(--headline-font-scale));
 	}
+
+	.container .list {
+		transition: opacity 500ms ease, transform 500ms ease;
+		will-change: opacity, transform;
+	}
+
+.scroll-transition-active .morphist > * {
+	display: none !important;
+}
+
+.scroll-transition-active .morphist {
+	display: none !important;
+}
+
+.freeze-text-node {
+	display: none;
+	width: auto;
+	text-align: center;
+	white-space: nowrap;
+	user-select: text;
+	cursor: text;
+}
+
+.scroll-transition-active .freeze-text-node {
+	display: inline-block;
+}
+
+#list2 + .freeze-text-node {
+	letter-spacing: 0;
+}
+
+#list2,
+#list3 {
+	position: relative;
+}
 .clear {
 
 clear:both;
@@ -182,6 +225,25 @@ clear:both;
 	padding-right: 1em;
 }
 p {display:inline;}
+
+footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 1.5em;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 500ms ease;
+	text-align: center;
+	padding: 0 1em;
+	box-sizing: border-box;
+}
+
+footer small {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgb(247, 6, 75);
+	display: inline-block;
+}
 
 a {
 	text-decoration: none;

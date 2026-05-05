@@ -1,0 +1,13 @@
+/* TEAM */
+Creator: Nicky Reinert
+Contact: nickyreinert+mfdh@gmail.com
+Location: Germany
+
+/* THANKS */
+Institut für digitale Herausforderungen
+https://institut-fdh.de
+
+/* SITE */
+Last update: 2026/05/05
+Language: German
+Standards: HTML5, CSS3

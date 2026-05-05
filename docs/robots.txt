@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ministerium-für-digitale-herausforderungen.de/sitemap.xml

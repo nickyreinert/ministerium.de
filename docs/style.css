@@ -97,9 +97,11 @@ body {
 	}
 	.container {
 		--headline-font-scale: 1;
-		height: 50%;
+		height: auto;
+		min-height: 50%;
 		width: 100%;
 		display: block;
+		box-sizing: border-box;
 		font-size: calc(1rem * var(--headline-font-scale));
 	}
 
@@ -256,6 +258,38 @@ a {
 /*(-webkit-min-device-pixel-ratio: 1.5),
 	   (min-resolution: 144dpi),
 	   (min-resolution: 1.5dppx) {*/
+
+@media (max-width: 929px) {
+	html {
+		letter-spacing: 0.1em;
+	}
+
+	.main {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container {
+		height: auto !important;
+		width: 100% !important;
+		box-sizing: border-box;
+		padding: 0 1em;
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.list {
+		width: 100% !important;
+		float: none !important;
+		margin: 0.4em 0 !important;
+		text-align: center;
+	}
+
+	.element {
+		font-size: 0.85em;
+	}
+}
 
 @media (min-width: 930px) {
 
